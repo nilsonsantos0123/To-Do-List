@@ -23,7 +23,7 @@ function mostrarTarefas() {
       novaLi +
       `
 
-    <li class="task ${item.cocluida && "done"}">
+    <li class="task ${item.concluida && "done"}">
          <img src="imagem/checked.png" alt="check-na-tarefa" onclick = 'concluirTarefa(${posicao})' />
         <p>${item.tarefa}</p>
         <img src="imagem/trash.png" alt="tarefa-lixeira" onclick='deletarItem(${posicao})'/>
@@ -36,7 +36,7 @@ function mostrarTarefas() {
 }
 
 function concluirTarefa(posicao) {
-  minhaListaDeItens[posicao].cocluida = !minhaListaDeItens[posicao].cocluida;
+  minhaListaDeItens[posicao].concluida = !minhaListaDeItens[posicao].concluida;
 
   mostrarTarefas();
 }
